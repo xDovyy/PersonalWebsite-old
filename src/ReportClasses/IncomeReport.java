@@ -14,14 +14,6 @@ public class IncomeReport extends Report {
         this.additionalInfo = additionalInfo;
     }
 
-    public void setAdditionalInfo(String additionalInfo) {
-        this.additionalInfo = additionalInfo;
-    }
-
-    public void setPaymentType(String paymentType) {
-        this.paymentType = paymentType;
-    }
-
     public String getPaymentType() {
         return paymentType;
     }

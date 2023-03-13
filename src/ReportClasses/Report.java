@@ -9,18 +9,6 @@ public abstract class Report {
 
     Report(int id){this.id = id;}
 
-    public void setSum(float sum) {
-        this.sum = sum;
-    }
-
-    public void setCategoryIndex(String categoryIndex) {
-        this.categoryIndex = categoryIndex;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public int getId() {
         return id;
     }
@@ -41,4 +29,5 @@ public abstract class Report {
     public String toString() {
         return super.toString();
     }
+
 }

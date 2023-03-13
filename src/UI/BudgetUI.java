@@ -11,9 +11,7 @@ import java.util.Scanner;
 
 public class BudgetUI extends javax.swing.JFrame {
 
-    public BudgetUI() {
-        initComponents();
-    }
+    public BudgetUI() {initComponents();}
 
     private void initComponents() {
 
@@ -196,7 +194,7 @@ public class BudgetUI extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>
+    }
 
     // Variables declaration - do not modify
     private javax.swing.JButton jButton1;
@@ -225,11 +223,6 @@ public class BudgetUI extends javax.swing.JFrame {
     // End of variables declaration
 
     public static void main(String[] args) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -237,18 +230,11 @@ public class BudgetUI extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BudgetUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BudgetUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BudgetUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException |
+                 UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(BudgetUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new BudgetUI().setVisible(true));
 
     }
@@ -391,9 +377,9 @@ public class BudgetUI extends javax.swing.JFrame {
             expenseTable[i][3] = expenses.get(i).getCategoryIndex();
             expenseTable[i][4] = expenses.get(i).getAdditionalInfo();
             if (expenses.get(i).isTransferred()){
-                expenseTable[i][5] = "Pervesta";
+                expenseTable[i][5] = "Transferred";
             }
-            else expenseTable[i][5] = "Nepervesta";
+            else expenseTable[i][5] = "Not Transferred";
             expenseTable[i][6] = "Edit";
             expenseTable[i][7] = "Delete";
         }

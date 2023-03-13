@@ -14,14 +14,6 @@ public class ExpenseReport extends Report {
         this.additionalInfo = additionalInfo;
     }
 
-    public void setAdditionalInfo(String additionalInfo) {
-        this.additionalInfo = additionalInfo;
-    }
-
-    public void setTransferred(boolean transferred) {
-        isTransferred = transferred;
-    }
-
     public boolean isTransferred() {
         return isTransferred;
     }
