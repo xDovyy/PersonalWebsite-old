@@ -273,13 +273,13 @@ public class ExpenseReportUI extends javax.swing.JFrame {
         String additionalInfo = infoField.getText();
         boolean isTransferred = transferBox.isSelected();
 
-        if(date.equals("") && !date.matches("\\d{4}.\\d{2}.\\d{2}")){
+        if(date.equals("") || !date.matches("\\d{4}.\\d{2}.\\d{2}")){
             dateField.setBackground(Color.PINK);
-            dateField.setText("Input as YYYY.MM.DD");
+            dateField.setText("Example: YYYY.MM.DD");
             valid = false;
         }
-        else{
-            sumField.setBackground(Color.WHITE);
+        else {
+            dateField.setBackground(Color.WHITE);
         }
 
         try{
