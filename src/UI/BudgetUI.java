@@ -222,7 +222,7 @@ public class BudgetUI extends javax.swing.JFrame {
     private Report tempReport;
     File dataFile = null;
     private int newId = 0;
-    // End of variables declaration
+    // End of variables declaration fawfafwgs
 
     public static void main(String[] args) {
         try {
