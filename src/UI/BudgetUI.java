@@ -4,6 +4,7 @@ import ReportClasses.ExpenseReport;
 import ReportClasses.IncomeReport;
 import ReportClasses.Report;
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import java.io.*;
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class BudgetUI extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
 
+        setTitle("Budget Program");
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.Color.white);
 
@@ -242,6 +244,9 @@ public class BudgetUI extends javax.swing.JFrame {
 
         jMenuItem2.addActionListener(e -> {
             SearchUI search = new SearchUI();
+            FileNameExtensionFilter restrict = new FileNameExtensionFilter("Only .csv files", "csv");
+            search.jFileChooser1.removeChoosableFileFilter(search.jFileChooser1.getChoosableFileFilters()[0]);
+            search.jFileChooser1.addChoosableFileFilter(restrict);
             int userSelection = search.jFileChooser1.showOpenDialog(search);
             if (userSelection == JFileChooser.APPROVE_OPTION) {
                 dataFile = search.jFileChooser1.getSelectedFile();
@@ -312,10 +317,16 @@ public class BudgetUI extends javax.swing.JFrame {
     public void saveAs(){
 
         SearchUI saveUI = new SearchUI();
+        FileNameExtensionFilter restrict = new FileNameExtensionFilter("Only .csv files", "csv");
+        saveUI.jFileChooser1.removeChoosableFileFilter(saveUI.jFileChooser1.getChoosableFileFilters()[0]);
+        saveUI.jFileChooser1.addChoosableFileFilter(restrict);
         saveUI.jFileChooser1.setDialogTitle("Specify a file to save");
         int userSelection = saveUI.jFileChooser1.showSaveDialog(saveUI);
         if (userSelection == JFileChooser.APPROVE_OPTION) {
             dataFile = saveUI.jFileChooser1.getSelectedFile();
+            if (!dataFile.getName().endsWith(".csv")){
+                dataFile = new File(dataFile.getPath() + ".csv");
+            }
             try {saveFile();}
             catch (Exception e){ return; }
             jLabel1.setText("File: " + dataFile.getName());
@@ -390,6 +401,7 @@ public class BudgetUI extends javax.swing.JFrame {
     public void addIncomeReport(){
 
         IncomeReportUI reportUI = new IncomeReportUI();
+        reportUI.setTitle("Add Income Report");
         reportUI.setVisible(true);
         reportUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
@@ -410,6 +422,7 @@ public class BudgetUI extends javax.swing.JFrame {
     public void addExpenseReport(){
 
         ExpenseReportUI reportUI = new ExpenseReportUI();
+        reportUI.setTitle("Add Expense Report");
         reportUI.setVisible(true);
         reportUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
@@ -431,6 +444,7 @@ public class BudgetUI extends javax.swing.JFrame {
         for (IncomeReport report: budget.getIncomeReports()){
             if (report.getId()==id){
                 IncomeReportUI reportUI = new IncomeReportUI();
+                reportUI.setTitle("Edit Income Report");
                 reportUI.editReport(report);
                 reportUI.setVisible(true);
                 reportUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -452,6 +466,7 @@ public class BudgetUI extends javax.swing.JFrame {
         for (ExpenseReport report: budget.getExpenseReports()){
             if (report.getId()==id){
                 ExpenseReportUI reportUI = new ExpenseReportUI();
+                reportUI.setTitle("Edit Expense Report");
                 reportUI.editReport(report);
                 reportUI.setVisible(true);
                 reportUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
