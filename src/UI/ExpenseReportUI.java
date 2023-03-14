@@ -273,8 +273,9 @@ public class ExpenseReportUI extends javax.swing.JFrame {
         String additionalInfo = infoField.getText();
         boolean isTransferred = transferBox.isSelected();
 
-        if(date.equals("")){
+        if(date.equals("") && date.matches("\\d{4}.\\d{2}.\\d{2}")){
             dateField.setBackground(Color.PINK);
+            dateField.setText("Input as YYYY.MM.DD");
             valid = false;
         }
         else{
