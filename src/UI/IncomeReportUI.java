@@ -270,7 +270,7 @@ public class IncomeReportUI extends javax.swing.JFrame {
         String additionalInfo = infoField.getText();
         String paymentType = paymentField.getText();
 
-        if(date.equals("") && date.matches("\\d{4}.\\d{2}.\\d{2}")){
+        if(date.equals("") && !date.matches("\\d{4}.\\d{2}.\\d{2}")){
             dateField.setBackground(Color.PINK);
             dateField.setText("Input as YYYY.MM.DD");
             valid = false;
