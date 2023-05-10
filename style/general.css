@@ -1,0 +1,58 @@
+:root {
+    --mainColorLight: #F1F6F9;
+    --mainColorDark: #394867;
+    --accentColor: #212A3E;
+    --additionalColor: #b0b1b2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background-color: var(--mainColorLight);
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--accentColor);
+    display: flex;
+    position: fixed;
+}
+
+nav,
+footer div{
+    display: inline-flex;
+    align-self: center;
+    margin-left: 10%;
+    align-items: center;
+}
+
+nav a{
+    color: var(--mainColorLight);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-shadow: #3a3a3a;
+}
+
+nav div {
+    height: 18px;
+    width: 2px;
+    background-color: var(--mainColorLight);
+    margin: 0 7px 0 7px;
+}
+
+footer {
+    padding:0 5px 0 7px;
+    height: 30px;
+    width: 100%;
+    background-color: var(--additionalColor);
+    display: flex;
+}

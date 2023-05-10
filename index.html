@@ -1,177 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dovydas Pavilonis</title>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style/general.css">
+    <link rel="stylesheet" href="./style/index.css">
     <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Poppins"
     />
-    <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Lobster"
-    />
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-    />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Poppins;
-        }
-
-        body {
-            background-color: #f8ede3;
-        }
-
-        header {
-            background-color: #7d6e83;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            box-shadow: 0px 10px 15px #00000049;
-        }
-
-        header h1 {
-            font-family: Lobster;
-            color: #f8ede3;
-            font-size: 60px;
-            font-weight: lighter;
-            padding-bottom: 10px;
-        }
-
-        header h1 i {
-            color: lightcoral;
-            font-size: 50px;
-        }
-
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
-
-        section div {
-            max-width: 70%;
-        }
-
-        main section:last-child {
-            background-color: #dfd3c3;
-            box-shadow: 0px -10px 15px #00000049;
-        }
-
-        main section:nth-child(3) {
-            background-color: #7d6e83;
-            box-shadow: 0px 0px 15px 10px #00000049;
-        }
-
-        .title {
-            padding: none;
-            padding-top: 150px;
-            background-size: cover;
-            box-shadow: 0px 10px 15px #00000049;
-        }
-
-        .card {
-            background-color: #dfd3c3ad;
-            width: 70%;
-            padding: 50px;
-            min-width: 600px;
-            border-radius: 5px;
-        }
-
-        .card h1 {
-            font-size: 60px;
-        }
-
-        .card p {
-            font-size: 22px;
-        }
-
-        .card p:last-child {
-            margin-top: 20px;
-        }
-
-        .images {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3%;
-            row-gap: 20px;
-            width: 100%;
-            flex-wrap: wrap;
-        }
-
-        .images div {
-            background-color: white;
-            border-radius: 5px;
-            width: 31%;
-            min-width: 300px;
-            height: 500px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .kuponas {
-            background-color: white;
-            background-size: cover;
-            background-position: center;
-            width: 80%;
-            max-width: 70%;
-            border-radius: 5px;
-        }
-
-    </style>
 </head>
 <body>
 
 <header>
-    <h1>Hello <i class="fa-solid fa-heart"></i></h1>
+    <nav>
+        <a href="">Home</a>
+        <div></div>
+        <a href="./about">About Me</a>
+        <div></div>
+        <a href="./contact">Contact</a>
+    </nav>
 </header>
-<main>
-    <section class="title">
-        <div>
-            <div class="card">
-                <h4>VERY SMALL TITLE</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut facilis laboriosam tempora. Aliquid beatae consectetur distinctio dolorem in necessitatibus nobis nulla odit praesentium quibusdam. Consequuntur deleniti dolore laboriosam sequi.
-                </p>
-                <p><a href="./contacts">Contacts</a></p>
-            </div>
+<section>
+    <div class="shortAbout">
+        <div class="decoration">
+
         </div>
-    </section>
-    <section class="flex">
-        <div class="images">
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="text">
+            <h1>Hello! I'm</h1>
+            <h2>Dovydas Pavilonis</h2>
+            <h3><i>Java Programmer | Student at CodeAcademy</i></h3>
+            <p>
+                I am currently studying Java Programming in CodeAcademy.
+                I also am looking for a job in Java development or similar.
+                More information about me <a href="./about">here... </a>
+                If you would like to contact me, my contacts are <a href="./contact">here... </a>
+            </p>
         </div>
-    </section>
-    <section>
-    </section>
-    <section>
-    </section>
-    <section class="flex">
-        <div class="images images1">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </section>
-</main>
+    </div>
+    <div class="photoPlace">
+
+    </div>
+</section>
+<footer>
+    <div>
+        <p style="color: #dedede">Copyright © Dovydas Pavilonis</p>
+    </div>
+</footer>
 
 </body>
 </html>
