@@ -55,4 +55,5 @@ footer {
     width: 100%;
     background-color: var(--additionalColor);
     display: flex;
+    bottom: 0;
 }
