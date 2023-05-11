@@ -2,6 +2,8 @@ section {
     display: inline-flex;
     width: 100%;
     padding-top: 70px;
+    min-height: 100vh;
+    height: 400px;
 }
 
 .shortAbout {
@@ -11,12 +13,21 @@ section {
     align-self: center;
     padding: 250px 20px 250px 20px;
     display: inline-flex;
+    min-width: 400px;
+    height: 100%;
 }
 .photoPlace {
     width: 40%;
     margin-right: 10%;
     background-color: var(--mainColorLight);
     align-self: center;
+    min-width: 400px;
+    background-image: url("/images/image.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to cover the entire container */
+    margin-left: 50px;
+    height: 100%
 }
 
 .shortAbout .decoration {
@@ -59,4 +70,22 @@ section {
 
 .shortAbout .text p a:hover{
     text-shadow: #2a2a2a 0 2px;
+}
+
+@media screen and (max-width: 600px) and (min-width: 0px) {
+    section {
+        display: block;
+    }
+
+    .shortAbout {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .photoPlace{
+        width: 0;
+        height: 0;
+    }
+
 }
