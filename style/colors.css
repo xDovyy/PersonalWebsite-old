@@ -1,6 +1,13 @@
+/*:root {*/
+/*    --mainColorLight: #F1F6F9;*/
+/*    --mainColorDark: #394867;*/
+/*    --accentColor: #212A3E;*/
+/*    --additionalColor: #b0b1b2;*/
+/*}*/
+
 :root {
-    --mainColorLight: #F1F6F9;
-    --mainColorDark: #394867;
-    --accentColor: #212A3E;
-    --additionalColor: #b0b1b2;
+    --mainColorLight: #F2E3DB;
+    --mainColorDark: #41644A;
+    --accentColor: #263A29;
+    --additionalColor: #E86A33;
 }
