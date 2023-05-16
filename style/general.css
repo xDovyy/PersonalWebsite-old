@@ -15,6 +15,7 @@ header {
     background-color: var(--accentColor);
     display: flex;
     position: fixed;
+    box-shadow: 0 -10px 30px 10px #1f1f1f;
 }
 
 nav,
@@ -25,21 +26,20 @@ footer div{
     align-items: center;
 }
 
-nav a{
-    color: var(--mainColorLight);
-    font-size: 18px;
-    text-decoration: none;
-}
-
-nav a:hover{
-    text-shadow: #3a3a3a;
-}
-
 nav div {
     height: 18px;
     width: 2px;
     background-color: var(--mainColorLight);
     margin: 0 7px 0 7px;
+}
+
+nav a{
+    color: var(--mainColorLight);
+    font-size: 18px;
+}
+
+nav a:hover{
+    color: var(--additionalColor);
 }
 
 footer {
@@ -51,8 +51,7 @@ footer {
     bottom: 0;
 }
 
-@media only screen and (max-device-width: 600px) and (min-width: 0px) {
-
-
-
+a {
+    text-decoration: none;
+    transition: color, 500ms;
 }
