@@ -83,11 +83,14 @@ section {
     section {
         display: flex;
         flex-direction: column;
+        min-width: 0;
     }
 
     .emailContact, .otherContact {
         width: 100%;
         margin: 0;
+        height: 50vh;
+        padding: 70px 20px 250px 20px;
     }
 
 }
