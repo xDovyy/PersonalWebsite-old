@@ -3,7 +3,7 @@ section {
     width: 100%;
     min-height: 100vh;
     height: 400px;
-    margin-top: 70px;
+    padding-top: 70px;
 }
 
 .shortAbout {
