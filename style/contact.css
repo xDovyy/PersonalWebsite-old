@@ -1,0 +1,93 @@
+section {
+    display: inline-flex;
+    width: 100%;
+    padding-top: 70px;
+    min-width: 1000px;
+}
+
+.emailContact, .otherContact {
+    width: 45%;
+    margin-left: 8%;
+    background-color: var(--mainColorDark);
+    align-self: center;
+    padding: 250px 20px 250px 20px;
+    display: flex;
+    min-width: 400px;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    background-color: var(--mainColorLight);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    min-height: 200px;
+    min-width: 400px;
+}
+
+.emailContact h2 {
+    color: var(--mainColorDark);
+    font-size: 36px;
+    margin-bottom: 5%;
+}
+
+.emailContact a {
+    color: var(--additionalColor);
+    font-size: 28px;
+    transition: color, 500ms;
+}
+
+.emailContact a:hover {
+    color: var(--accentColor);
+}
+
+.otherContact {
+    margin-right: 5%;
+    margin-left: 0;
+    background-color: var(--mainColorLight);
+}
+
+.otherContact div {
+    background-color: var(--mainColorDark);
+}
+
+.otherContact h2 {
+    color: var(--mainColorLight);
+    margin-bottom: 5%;
+    font-size: 30px;
+}
+
+.otherContact .container a {
+    color: var(--additionalColor);
+    font-size: 50px;
+    transition: color, 500ms;
+}
+
+.otherContact .container a:first-child {
+   margin-right: 50px;
+}
+
+.otherContact .container a:hover {
+    color: var(--accentColor);
+}
+
+@media only screen and (max-device-width: 1000px) and (min-width: 0px) {
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .emailContact, .otherContact {
+        width: 100%;
+        margin: 0;
+    }
+
+}
