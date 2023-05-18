@@ -5,6 +5,12 @@
     font-family: Poppins;
 }
 
+section {
+    display: inline-flex;
+    width: 100%;
+    min-width: 1000px;
+}
+
 body {
     background-color: var(--mainColorLight);
 }
@@ -54,4 +60,14 @@ footer {
 a {
     text-decoration: none;
     transition: color, 500ms;
+}
+
+@media only screen and (max-device-width: 1000px) and (min-width: 0px) {
+
+    section {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
 }
