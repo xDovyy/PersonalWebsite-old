@@ -25,10 +25,6 @@
     min-width: 400px;
 }
 
-.emailContact {
-    padding-top: 70px;
-}
-
 .emailContact h2 {
     color: var(--mainColorDark);
     font-size: 36px;
@@ -82,6 +78,10 @@
         margin: 0;
         height: 45vh;
         padding: 70px 4% 70px 4%;
+    }
+    
+    .emailContact {
+    padding-top: 140px;
     }
 
     .container {
